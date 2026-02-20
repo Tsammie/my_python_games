@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media-query</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 80%;
+            margin: 70px auto;
+            border: thin solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+
+        }
+
+        .child {
+            background-color: rgb(211, 211, 211);
+            margin-inline: 10px;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 2px 4px 10px rgba(214, 179, 179, 0.445);
+        }
+
+        @media(max-width:1000px) {
+            .child {
+                background-color: red;
+                border-radius: 0;
+            }
+
+        }
+
+        @media (max-width:800px) {
+            .child {
+                background-color: green;
+            }
+        }
+
+        .parent {
+            width: 90%;
+        }
+
+        @media (max-width:690px) {
+            .parent {
+                flex-direction: column;
+            }
+
+            .child:nth-child(1) {
+                order: 2;
+            }
+
+            .child:nth-child(2) {
+                order: 3;
+            }
+
+            .child:nth-child(3) {
+                order: 1;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <h1>1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, perspiciatis. Dolorum vero ut
+                temporibus totam est perspiciatis harum ex iure nulla maiores, quos nobis doloremque quis fuga, earum
+                dolores dignissimos!</p>
+        </div>
+        <div class="child">
+            <h1>2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloremque laudantium numquam placeat
+                animi, explicabo debitis illum ex autem repellendus? Cumque officiis nihil eveniet animi consectetur
+                sint ipsa laboriosam esse.</p>
+        </div>
+        <div class="child">
+            <h1>3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolore similique alias quae
+                voluptatibus doloremque magni consectetur tenetur atque placeat, impedit velit, odit molestiae mollitia
+                voluptatem accusamus illo ipsa debitis.</p>
+        </div>
+    </div>
+</body>
+
+</html>

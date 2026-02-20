@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            width: 60%;
+            padding-block: 18px;
+            /* height: 40px; */
+            border: thin solid black;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        img {
+            width: 70px;
+        }
+
+        .nav-link ul li {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: 600;
+            color: #00208A;
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .nav-link ul li span {
+            position: absolute;
+            /* top: -2px; */
+            font-size: 20px;
+
+        }
+        .dropdown{
+            box-shadow: 2px 2px 10px gray;
+            width: 200px;
+            padding: 20px;
+            border-top: 2px solid blue;
+            background-color: white;
+            position: absolute;
+            top:43.5px
+        }
+        .dropdown a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 3px;
+        }
+        .dropdown a:hover{
+            background-color: gray;
+        }
+        .dropdownBox{
+            /* background-color: aqua; */
+            position: absolute;
+            visibility: hidden;
+            width: 200px;
+            height: 300px;
+
+
+        }
+        .nav-link ul li:hover .dropdownBox{
+            visibility: visible;
+        }
+    </style>
+</head>
+<header>
+    <div class="nav">
+        <div> <img src="https://edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" alt="logo"></div>
+        <div class="nav-link">
+            <ul>
+                <li>About <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span> <div class="dropdownBox"> <div class="dropdown">
+    <a href="">Our story</a>
+    <a href="">BAh</a>
+    <a href="">ho</a>
+</div></div></li>
+                <li>Programmes</li>
+                <li>Admissions</li>
+                <li>E-portal</li>
+                <li>SQI Scholarship</li>
+                <li>News</li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<body>
+
+</body>
+
+</html>

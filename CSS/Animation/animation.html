@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            animation-name: changeColor;
+            animation-duration:5s ; /*Animationduration is very important*/
+        }
+        /* @keyframes changeColor {
+           from{
+            background-color: red;
+            transform: translateX(0);
+           }
+           to{ background-color: blue;
+        transform: translateX(400px);}} */
+       @keyframes changeColor {
+        0%{
+            background-color: red; transform: translate(0,0);
+        }
+        25%{ 
+            background-color: blue; transform: translate(300px,0);
+        }
+        50%{background-color: orange; transform: translate(300px,300px);}
+        75%{background-color: purple; transform: translate(0px,300px)}
+        100%{background-color: brown; transform: translate(0,0);}
+        
+       }
+    </style>
+</head>
+<body>
+    <!-- Css Animation has a lot of properties including animation key frame, to use animation in css, you must introduce keyframe, 
+     animation-name, animation-duration,  -->
+     <div class="box"></div>
+</body>
+</html>

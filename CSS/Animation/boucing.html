@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sports_and_outdoors" />
+    <style>
+        .total {
+            width: 100vw;
+            height: 800px;
+            background-color: aqua;
+        }
+
+        .background {
+            width: 100%;
+            height: 70%;
+            background-image: linear-gradient(to bottom, blue, skyblue);
+        }
+
+        .grass {
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom: 85px;
+            background-image: linear-gradient(to top, greenyellow, green);
+        }
+        .ball span{
+            font-size: 100px;
+            position:relative;
+            top: 442px;
+            animation-name: bow;
+            animation-duration: 2s;
+        }
+        @keyframes bow {
+            0%{transform: translate(0,0);}
+            5%{transform: translate(100px,-300px);}
+            10%{transform: translate(200px,-300px);}
+            20%{transform: translate(300px,0px);}
+            25%{transform: translate(400px,-300px);}
+            30%{transform: translate(500px,-300px)}
+            40%{transform: translate(600px,0px);}
+            45%{transform: translate(700px,-300px);}
+            50%{transform: translate(800px,-300px)}
+            60%{transform: translate(900px,0px);}
+            65%{transform: translate(1000px,-300px);}
+            70%{transform: translate(1100px,-300px)}
+            80%{transform: translate(1200px,0px);}
+            85%{transform: translate(1300px,-300px);}
+            90%{transform: translate(1400px,-300px)}
+            100%{transform: translate(1500px,0px);}
+            /* 105%{transform: translate(800px,-300px);}
+            110%{transform: translate(850px,-300px)}
+            120%{transform: translate(900px,0px);}
+            125%{transform: translate(950px,-300px);}
+            130%{transform: translate(1000px,-300px)}
+            140%{transform: translate(1050px,0px);}
+            145%{transform: translate(1100px,-300px);}
+            150%{transform: translate(1150px,-300px)}
+            160%{transform: translate(1200px,0px);}
+            165%{transform: translate(1250px,-300px);}
+            170%{transform: translate(1300px,-300px)}
+            180%{transform: translate(1350px,0px);}
+         */
+        
+        
+        
+        
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="total">
+        <div class="background">
+            <div class="ball"> <span class="material-symbols-outlined">
+                    sports_and_outdoors
+                </span>
+                
+            </div><div class="grass"></div>
+        </div>
+    </div>
+</body>
+
+</html>

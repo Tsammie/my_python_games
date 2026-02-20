@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SQI-style Navbar</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font: 500 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: black;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            height: 54px;
+            width: auto;
+        }
+
+        .nav {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav>li {
+            position: sticky;
+        }
+
+        .nav>li>a {
+            text-decoration: none;
+            color: blue;
+            padding: 8px 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav>li>a:hover,
+        .nav>li>a:focus {
+            color: blueviolet;
+        }
+
+        .has-dd>a::after {
+            content: "▾";
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: whitesmoke;
+            border: 1px solid white;
+            border-radius: 1px;
+            border-top: 2px solid darkblue;
+            padding: 10px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+            z-index: 10;
+        }
+
+        .dropdown a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-right: 6px;
+            border-radius: 6px;
+            color: #0b1220;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover,
+        .dropdown a:focus {
+            background: white;
+        }
+
+        .has-dd:hover .dropdown,
+        .has-dd:focus-within .dropdown {
+            display: block;
+        }
+
+        .rule {
+            border-top: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img class="logo" src="https://edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" alt="SQI College of ICT" />
+
+        <ul class="nav">
+            <li class="has-dd">
+                <a href="#">About</a>
+                <div class="dropdown">
+                    <a href="#">Our Story</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Campus info</a>
+                </div>
+            </li>
+
+            <li class="has-dd">
+                <a href="#">Programmes</a>
+                <div class="dropdown">
+                    <a href="#">National Diploma</a>
+                    <a href="#"> National Innovation Diploma</a>
+                    <a href="#">Professional Diploma Program</a>
+                    <a href="#">Executive Professional Certificate Programme</a>
+                </div>
+            </li>
+
+            <li class="has-dd">
+                <a href="#">Admissions</a>
+                <div class="dropdown">
+                    <a href="#">Apply for a Programme</a>
+                    <a href="#">Mode of Study</a>
+                    <a href="#">Tuition</a>
+                    <a href="#">Frequently Asked Questions</a>
+                </div>
+            </li>
+
+            <li class="has-dd">
+                <a href="#">E-Portal</a>
+                <div class="dropdown">
+                    <a href="#">Student</a>
+                    <a href="#">Staff</a>
+                </div>
+            </li>
+
+            <li><a href="#">SQI Scholarship</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

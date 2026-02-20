@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flutterwave</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .page {
+            background-color: #1D1D1D;
+            width: 100vw;
+            height: 1000px;
+        }
+
+        .header {
+            justify-content: center;
+            text-align: center;
+            /* border: thin solid black; */
+            width: 37%;
+            align-items: center;
+            margin: auto;
+            /* padding-inline: 200px; */
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 5em;
+
+        }
+
+        .header h1 span {
+            color: pink;
+        }
+
+        .nextline {
+            justify-content: center;
+            text-align: center;
+            /* border: thin solid black; */
+            width: 34%;
+            align-items: center;
+            margin: auto;
+            color: #ffffff;
+            font-family: sans-serif;
+            font-weight: 100;
+            font-stretch: 100%;
+            text-decoration: #ffffff;
+            font-size: 22px;
+            padding-block: 70px;
+        }
+
+        .empty2 {
+            width: 100vw;
+            height: 400px;
+        }
+
+        .empty {
+            width: 100vw;
+            height: 400px;
+        }
+
+        .cards {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            /* border: thin solid red; */
+            width: 70%;
+            justify-content: center;
+            margin: auto;
+            position: relative;
+            
+        }
+
+        .firstcard {
+            /* border: thin solid white; */
+            width: 43%;
+            background-color: #333333;
+            border-radius: 26px;
+            box-shadow: 2px 2px 10px black;
+            padding: 30px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            padding-inline: 40px;
+            font-size: 18px;
+            color: #ffffff;
+            /* height: 260px; */
+            position: absolute;
+            left: 30px;
+            font-weight: 1000;
+        }
+        .firstcard h3{
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+        .secondcard {
+            /* border: thin solid white; */
+            width: 43%;
+            background-color: #333333;
+            border-radius: 26px;
+            box-shadow: 2px 2px 10px black;
+            padding: 30px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            padding-inline: 40px;
+            font-size: 18px;
+            color: #ffffff;
+            position: absolute;
+            left: 430px;
+        }
+        .secondcard h3{
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+        .thirdcard {
+            /* border: thin solid white; */
+            width: 45%;
+            background-color: #333333;
+            border-radius: 26px;
+            box-shadow: 2px 2px 10px black;
+            padding: 30px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            padding-inline: 40px;
+            font-size: 18px;
+            color: #ffffff;
+            /* height: 260px; */
+            position: absolute;
+            left: 770px;
+        }
+        .thirdcard h3{
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+        .firstcard:hover + .secondcard {
+            transform: translateX(160px);
+            transition-duration: 0.8s;
+            transition-property: transform;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.3s;
+        }
+        .secondcard:hover + .thirdcard{
+            transform: translateX(120px);
+            transition-duration: 0.8s;
+            transition-property: transform;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.3s;
+        }
+        .secondcard:hover{
+            transform: translateX(-80px);
+            transition-duration: 0.8s;
+            transition-property: transform;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="empty2"></div>
+    <div class="page">
+        <div class="header">
+            <h1>Endless payment possibilities for every <span>individual</span></h1>
+        </div>
+        <div class="nextline">
+            <p> Flutterwave offers a host of seamless products for individuals, ensuring smooth transactions and
+                efficient money management.</p>
+        </div>
+        <div class="cards">
+            <div class="firstcard"> <h3>Send money to loved ones</h3> <p>Experience the convenience and security of Send, enabling you to effortlessly and securely transfer funds to your beloved ones residing overseas. Begin sharing financial support with the ones who hold significance in your life right here</p></div>
+        <div class="secondcard">
+            <h3>Shop online</h3>
+            <p>Explore a world of possibilities as you Discover, Shop, and have your purchases conveniently delivered
+                from your cherished online businesses. Embark on a secure shopping journey and relish the joy of
+                acquiring great items from amazing small businesses, right here</p>
+        </div>
+        <div class="thirdcard">
+            <h3>Find events and Buy tickets</h3>
+            <p>Browse upcoming events and secure your ticket on our Afritickets platform here</p>
+        </div>
+    </div>
+    </div>
+    <div class="empty"></div>
+</body>
+
+</html>

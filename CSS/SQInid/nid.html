@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            /* border: thin solid yellow; */
+            width: 100%;
+            height: 100px;
+            z-index: 4;
+            position: fixed;
+            background-color: #ffffff;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav {
+            width: 60%;
+            padding-block: 18px;
+            /* height: 40px; */
+            /* border: thin solid black; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 400px;
+            z-index: 4;
+        }
+
+        img {
+            width: 70px;
+        }
+
+        .nav-link ul li {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: 600;
+            color: #00208A;
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .nav-link ul li span {
+            position: absolute;
+            /* top: -2px; */
+            font-size: 20px;
+
+        }
+
+        .dropdown {
+            box-shadow: 2px 2px 10px gray;
+            width: 200px;
+            padding: 20px;
+            border-top: 2px solid #00208A;
+            background-color: white;
+            position: absolute;
+            top: 43.5px;
+            z-index: 2;
+        }
+
+        .dropdown a {
+            display: block;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 3px;
+        }
+
+        .dropdown a:hover {
+            background-color: gray;
+        }
+
+        .dropdownBox {
+            /* background-color: aqua; */
+            position: absolute;
+            visibility: hidden;
+            width: 200px;
+            height: 300px;
+
+
+        }
+
+        .nav-link ul li:hover .dropdownBox {
+            visibility: visible;
+        }
+
+        footer * {
+            box-sizing: border-box;
+        }
+
+        footer td {
+            margin: 120px;
+            width: 350px;
+            padding-inline: 30px;
+            vertical-align: top;
+        }
+
+        footer th {}
+
+        footer tr {}
+
+        footer h3 {
+            color: #444444;
+            padding: 0px;
+        }
+
+        footer h4 {
+            padding: 0px;
+
+        }
+
+        footer h6 {
+            line-height: 1.7em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        footer .box h2 {
+            color: #00208A;
+        }
+
+        footer .box {
+            margin-block: 100px;
+            /* margin-inline: 200px; */
+            padding-inline: 200px;
+            background-color: #f8f8f8;
+            width: 100%;
+        }
+
+        footer p {
+            line-height: 1.7em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #666870;
+        }
+
+        footer a:link {
+            text-decoration: none;
+            padding: 3px;
+            font-weight: bold;
+            line-height: 4;
+            color: red;
+        }
+
+        .video {
+            /* border: thick solid black; */
+            width: auto;
+            height: 600px;
+            justify-content: center;
+            justify-items: right;
+            align-items: right;
+            align-content: center;
+            background-color: #444444;
+            padding-inline: 1000px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .video video {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100px;
+            /* border: thin solid purple; */
+            z-index: 0;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        .text {
+            position: relative;
+            color: #f8f8f8;
+            text-align: right;
+            z-index: 1;
+            width: 800px;
+            max-width: 800px;
+            padding: 20px;
+            /* border: thin solid black;        */
+            justify-content: right;
+            left: 520px;
+
+        }
+
+        .text h1 {
+            font-size: 60px;
+            font-family: sans-serif;
+            font-weight: 800;
+            /* justify-content: right; */
+            /* justify-self: right; */
+            /* justify-items: right; */
+            /* text-align: right; */
+
+        }
+
+        .text p {
+            font-weight: 600;
+            font-size: larger;
+            line-height: 3rem;
+        }
+
+        .text a {
+            color: white;
+            border: 2px solid white;
+            text-align: right;
+            position: relative;
+            padding: 10px;
+
+
+        }
+
+        .one {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: O auto;
+            gap: 40px;
+        }
+
+        .one h1 {
+            color: #00208A;
+        }
+
+        .degree-section {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            justify-items: center;
+        }
+
+        .degree-section .leftside {
+            flex: 1 1 50%;
+            color: #333;
+            min-width: 300px;
+        }
+
+        .degree-section .leftside h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00208A;
+        }
+
+        .degree-section .leftside p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .degree-section .leftside a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #00208A;
+            color: #f8f8f8;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .degree-section .rightside {
+            flex: 1 1 40%;
+            text-align: center;
+        }
+
+        .degree-section .rightside img {
+            max-width: 100%;
+            border-radius: 6px;
+            height: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            width: 600px;
+        }
+
+        .programs-section {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+
+        .programs-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .programs-section h2 {
+            font-size: 3.2rem;
+            color: #00208A;
+            margin-bottom: 20px;
+            text-align: left;
+            padding-inline: 200px;
+            font-family: sans-serif;
+
+        }
+
+        .programs-section .intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+            font-size: 1.2rem;
+            font-family: sans-serif;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transformY(-8px);
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .program-card h3 {
+            font-size: 1.2rem;
+            color: #00208A;
+            margin: 20px;
+        }
+
+        .program-card ul {
+            margin: 0 20px 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .program-card ul li {
+            margin-bottom: 8px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .sqi-advantage {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .sqi-advantage h2 {
+            color: #555;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            text-align: left;
+            padding-inline: 20px;
+        }
+
+        .sqi-advantage h1 {
+            font-size: 54px;
+            margin-bottom: 40px;
+            color: #333333;
+            text-align: left;
+            padding-inline: 20px;
+        }
+        .advantage-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .adv-card{
+            background-color: #f9ffff;
+            padding: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<div class="page">
+    <header>
+        <div class="nav">
+            <div> <img src="https://edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" alt="logo"></div>
+            <div class="nav-link">
+                <ul>
+                    <li>About <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                        <div class="dropdownBox">
+                            <div class="dropdown">
+                                <a href="">Our story</a>
+                                <a href="">Our team</a>
+                                <a href="">Campus Info</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Programmes <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                        <div class="dropdownBox">
+                            <div class="dropdown">
+                                <a href="">National Diploma</a>
+                                <a href="">National Innovation Diploma</a>
+                                <a href="">Professional Diploma Programme</a>
+                                <a href="">Executive Professional Certificate Programme</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Admissions<span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                        <div class="dropdownBox">
+                            <div class="dropdown">
+                                <a href="">Apply for a programme</a>
+                                <a href="">Mode of study</a>
+                                <a href="">Tuition</a>
+                                <a href="">Frequently Asked Questions</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>E-portal <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                        <div class="dropdownBox">
+                            <div class="dropdown">
+                                <a href="">Student</a>
+                                <a href="">Staff</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>SQI Scholarship</li>
+                    <li>News</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <body>
+        <section class="video-section">
+            <div class="video"> <video loop="loop" autoplay="" playsinline="" muted preload="none"
+                    src="https://edu.sqi.ng/wp-content/uploads/2023/05/sqi-web-video-1.webm">
+                </video>
+                <div class="text">
+                    <h1>The <br>
+                        National Innovation <br>
+                        Diploma Program</h1>
+                    <p>Real learning begins here.</p> <br> <a href="">Apply Now!
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="degree-section">
+            <div class="one">
+                <div class="leftside">
+                    <h1>Earn a Degree + Experience</h1>
+                    <p>Earn your National Innovative Diploma (NID) in ICT and launch or advance your career with the
+                        in-demand
+                        skills to succeed in several high-growth industries. As a student in the program, you will
+                        achieve
+                        proficiency and real-life practical experience in your course of choice.</p>
+                    <hr>
+                    <p>The National Innovation Diploma (NID) offered at SQI College of ICT is an approved academic
+                        program of
+                        National Board for Technical Education (NBTE) an important organ under the Nigerian Federal
+                        Ministry of
+                        Education. The National Innovation Diploma programme provides access to Technical and Vocational
+                        education in Nigeria.</p> <a href="">Admission Requirements</a>
+                </div>
+                <div class="rightside"><img src="https://edu.sqi.ng/wp-content/uploads/2023/04/sqi-graduate.jpg"
+                        alt="graduate celebrating"></div>
+
+            </div>
+        </section>
+        <section class="programs-section">
+            <div class="container">
+                <h2>Our Accredited Programs</h2>
+                <p class="intro">Our courses are broad and deep – giving you the skills to create future
+                    <br> When students complete their academic studies, they are awarded the National Innovation Diploma
+                    which is equivalent to and conforms with the standard National Diploma certificates awarded in
+                    polytechnics and mono-technics in Nigeria.
+                </p>
+                <div class="programs-grid">
+                    <div class="program-card"> <img
+                            src="https://edu.sqi.ng/wp-content/uploads/2023/05/software-developer.jpg"
+                            alt="software Engineering">
+                        <h3> DEPARTMENT OF COMPUTER AND SOFTWARE ENGINEERING.</h3>
+                        <ul>
+                            <li>Web Application Development Option</li>
+                            <li>Native Application Development Option</li>
+                            <li>Cyber Security Option</li>
+                            <li>Data Science/Analysis Option</li>
+                            <li>Artificial Intelligence</li>
+                        </ul>
+                    </div>
+                    <div class="program-card"> <img
+                            src="https://edu.sqi.ng/wp-content/uploads/2023/05/hardware-engineer.jpg"
+                            alt="hardware Engineering">
+                        <h3> DEPARTMENT OF COMPUTER AND HARDWARE ENGINEERING</h3>
+                        <ul>
+                            <li>Robotics Engineering Option</li>
+                            <li>Computer Hardware Engineering Option</li>
+                            <li>Network Security Systems Option</li>
+                            <li>Cloud/Server Administration Option</li>
+                            <li>Internet of Things Option</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sqi-advantage">
+            <h2>WHY STUDY AT SQI</h2>
+            <h1>SQI Advantage</h1>
+            <div class="advantage-grid">
+                <div class="adv-card">
+                    <h3>Facilities and Lecturers</h3>
+                    <p>World class facilities, seasoned lecturers and certified instructors</p>
+                </div>
+                <div class="adv-card">
+                    <h3>Acquire a tech skill</h3>
+                    <p>Acquire in-demand professional skills and certificate alongside your Diploma program</p>
+                </div>
+                <div class="adv-card">
+                    <h3>Job Opportunity</h3>
+                    <p>78.5% of our students found secure employment within three months of graduation. Students leave
+                        from learning to getting job roles</p>
+                </div>
+                <div class="adv-card">
+                    <h3>Conducive learning space</h3>
+                    <p>Enjoy uninterrupted learning and practical experience at our campuses.</p>
+                </div>
+                <div class="adv-card">
+                    <h3>Learn the smarter and faster way</h3>
+                    <p>Build real world projects that greatly enhance your portfolio and gives you a competitive edge.
+                    </p>
+                </div>
+                <div class="adv-card">
+                    <h3>Purely practical</h3>
+                    <p>This course is practical, Hands-on learning. Practice and apply knowledge faster with real-world
+                        projects you can show off.</p>
+                </div>
+            </div>
+        </section>
+
+    </body>
+    <footer>
+        <div class="box">
+            <table>
+                <tr class="firstrow">
+                    <td>
+                        <h2>Hello, we’re SQI College of ICT</h2>
+                    </td>
+                    <td>
+                        <H3> Quick Links</H3>
+                    </td>
+                    <td>
+                        <H3>Ogbomoso</H3>
+                    </td>
+                    <td>
+                        <H3>Ibadan</H3>
+                    </td>
+                    <td>
+                        <H3>Abeokuta</H3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="font-size: 14px; color: #666666;">We provide and lead others in quality ICT education.
+                        <p> <img src="" alt=""> <a href=""><img
+                                    src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt="" width="24px"></a>
+                            <a href=""><img src="https://cdn-icons-png.flaticon.com/128/5968/5968958.png" alt=""
+                                    width="24px"></a> <a href=""><img
+                                    src="https://cdn-icons-png.flaticon.com/128/3128/3128219.png" alt=""
+                                    width="24px"></a> <a href=""><img
+                                    src="https://cdn-icons-png.flaticon.com/128/1384/1384028.png" alt=""
+                                    width="24px"></a> <a href=""><img
+                                    src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt=""
+                                    width="24px"></a>
+                        <p>Send us a mail</p> <a href="">enquiry@edu.sqi.ng</a>
+                    </td>
+                    <td>
+                        <p>
+                            </h6><a href="">Application Portal</a><br> <a href="">Student Portal </a> <br><a
+                                href="">Professional Courses </a><br> <a href="">NID Courses </a> <br><a href="">Campus
+                                Info</a> <br><a href="">Accomodation </a> <br><a href="">SQI Scholarship</a> <br> <a
+                                href="">Donate</a> </p>
+                    </td>
+                    <td>
+                        <p>Old Ilorin Road,
+                            Opposite Yoaco Filling Station,
+                            Yoaco, Ogbomoso.
+                        <h4>0906 281 9991, 0906 281 9993 </h4>
+                        </p> <a href=""> Locate on the Map</a>
+                    </td>
+                    <td>
+                        <P>First Floor, H25 Heritage Mall,
+                            Opposite Central Bank of Nigeria,
+                            Dugbe, Ibadan.</P>
+
+                        <h4>0906 281 9994</h4>
+
+                        <a href="">Locate on the map </a>
+                        <p>Christianah Oyinade Ajoke House, beside First Bank, Arisekola Central Mosque, Opposite Jaiz
+                            bank, Idi Ape, Iwo road, Ibadan.</p>
+
+                        <h4>0906 281 9995</h4>
+
+                        <a href="">Locate on the map</a>
+
+                        <p>Haier Thermocool Building, opposite SAO filling station, Challenge, Ibadan, Oyo State.</p>
+
+                        <H4>0906 281 9992</H4>
+
+                        <a href="">Locate on the map</a>
+                    </td>
+                    <td>
+                        <p>First floor, OPIC Tower building, Okeilewo, Abeokuta.</p>
+
+                        <h4>0906 281 9996</h4>
+
+                        <a href="">Locate on the map</a>
+
+                        <H3>Osogbo</H3>
+                        <p>Opposite Jaiz bank, Ogo-Oluwa, Osogbo</p>
+
+                        <h4>0906 281 9997</h4>
+
+                        <a href="">Locate on the map</a>
+
+
+                        <h3>Abuja</h3>
+                        <p>Zone 4, Febson Mall, Plot 2425 Herbert Macaulay Way, Wuse, Abuja 900284, Federal Capital
+                            Territory</p>
+
+                        <h4>0906 282 0000</h4>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+    </footer>
+</div>
+
+</html>

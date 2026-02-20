@@ -1,0 +1,26 @@
+<style>
+        /* simple selector */
+        /* Element selector
+        /* class selector
+        Id seletctor 
+        Universal selector */
+
+
+        /* Element selector */
+        p{
+            background-color: red;
+            width: 70%;
+        }
+        .loremText {
+            background-color: red;
+            width: 70%;
+        }
+
+        H1{ font-size: 50px;
+        background-color: aqua;}
+
+        #head{
+            background-color: blue;
+        }
+
+    </style>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airplane game</title>
+    <style>
+        .interface {
+            width: 100vw;
+            background-color: pink;
+            height: 1000px;
+
+        }
+
+        .skybackground {
+            width: 100vw;
+            background-color: skyblue;
+            height: 80%
+        }
+
+        .grassbackground {
+            width: 100vw;
+            background-color: greenyellow;
+            height: 20%
+        }
+
+        img {
+            width: 150px;
+            position: absolute;
+            bottom: 400px;
+            left: 60px;
+            animation-name: movek;
+            animation-duration: 15s;
+        }
+        @keyframes movek{
+            0%{transform: translateX(0);}
+            5%{transform:translate(300px,200px)}
+            10%{transform: translate(400px,180px);}
+            15%{transform:translate(550px,100px)}
+            20%{transform: translate(550px,-100px);}
+            25%{transform: translate(700px,-100px);}
+            30%{ transform: translate(800px,-150px);}
+            35%{transform: translate(900px,-50px);}
+            40%{transform: translate(1000px,300px)}
+            45%{transform: translateX(1500px,300px)}
+            50%{transform: translate(2000px,300px); transform: rotateX('180');}
+            55%{transform: translate(2000px,300px);}
+            60%{transform:translate(1500px,300px)}
+            65%{transform:translate(1000px,300px)}
+            70%{transform:translate(900px,-50px)}
+            75%{transform:translate(800px,-150px)}
+            80%{transform:translate(700px,-100px)}
+            85%{transform: translate(550px,-100px);}
+            90%{transform:translate(550px,100px)}
+            95%{transform:translate(400px,180px)}
+            100%{ transform:translate(0)}
+        }
+        .wallone{
+            width: 60px;
+            height: 75%;
+            background-color: brown;
+            position: absolute;
+            right: 500px;
+        }
+        .walltwo{ 
+         width: 60px;
+            height: 300%;
+            background-color: brown;
+            position: relative;
+            left: 800px;
+            bottom: 200%
+        }
+        .wallthree{
+            width: 60px;
+            background-color: brown;
+            height:500px;
+            position: relative;
+            left: 500px;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="interface">
+        <div class="skybackground">
+            <img src="./img/airplane.JPG" alt="aircraft img">
+            <div class="wallone">wallone</div>
+            <div class="wallthree"></div>
+        </div>
+        <div class="grassbackground"> 
+            <div class="walltwo"> </div>
+            <div class="wallfour"></div>
+        </div>
+    </div>
+</body>
+
+</html>

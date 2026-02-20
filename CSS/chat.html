@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f8fa;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
+      background-color: #f7f8fa;
+    }
+
+    .text-block {
+      flex: 1 1 45%;
+    }
+
+    .text-block h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #000;
+    }
+
+    .text-block p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .text-block button {
+      padding: 10px 20px;
+      background-color: #0a0a23;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-block {
+      flex: 1 1 45%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-block img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-block, .image-block {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Section: Store -->
+  <section class="section">
+    <div class="text-block">
+      <h2>Store</h2>
+      <p>Create a free ecommerce website and start selling worldwide with just a few clicks.</p>
+      <button>Start selling</button>
+    </div>
+    <div class="image-block">
+      <img src="https://cdn.filestackcontent.com/resize=width:900/output=format:webp/bkgNvkPuRLyYGNqXNFGP" alt="Business Owner" />
+    </div>
+  </section>
+
+  <!-- Second Section: Invoices -->
+  <section class="section">
+    <div class="image-block">
+      <img src="https://cdn.filestackcontent.com/resize=width:900/output=format:webp/bkgNvkPuRLyYGNqXNFGP" alt="Cool Illustration" />
+    </div>
+    <div class="text-block">
+      <h2>Invoices</h2>
+      <p>Generate professional invoices for your customers and get paid from anywhere.</p>
+    </div>
+  </section>
+
+</body>
+</html>

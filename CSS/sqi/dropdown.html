@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Example</title>
+  <style>
+    /* Basic nav container */
+    .dropdown {
+      position: relative; /* parent for absolute positioning */
+      display: inline-block;
+    }
+    img{
+        display: block;
+        background-color: red;
+    }
+
+    /* The button or link you hover on */
+    .dropbtn {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none; /* hidden initially */
+      position: absolute;
+      top: 100%; /* right below the button */
+      left: 0;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Hover effect for links */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown when hovering over parent */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Optional: change button color when active */
+    .dropdown:hover .dropbtn {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <img src="https://edu.sqi.ng/wp-content/uploads/2019/01/co.jpg" alt="">
+    </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+
+</body>
+</html>
